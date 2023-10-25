@@ -29,7 +29,7 @@ app.use(cartRoutes);
 // app.use(cors({ origin: "*" }));
 
 databaseConnection(() => {
-    app.listen(3000, () => {
+    app.listen(8080, () => {
         console.log(`Server is running on port ${8080}`)
     })
 })
