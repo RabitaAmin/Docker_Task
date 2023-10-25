@@ -1,22 +1,20 @@
 version: "3.8"
 services:
-  client:
+  server:
     build: ./front_end
     ports:
-      - 8081:8081
-  server:
+      - 8080:8080
+  client:
     build: ./back_end
     ports:
-      - 8080:8080
+      - 8081:8081
     environment:
-      DATABASE_URL: "mongodb://db:27017/book-store" 
+      DATABASE_URL: "mongodb://db:27017/book-store" # Use equal sign for environment variables
   db:
     image: mongo
     ports:
       - 27017:27017
     volumes:
-      - MERN_project:/data/db 
+      - MERN_project:/data/db # Define volumes as a list
 volumes:
   MERN_project:
-
-
