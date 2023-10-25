@@ -1,21 +1,21 @@
 version: "3.8"
 services:
-  web:
+  client:
     build: ./front_end
     ports:
-      - 3000:3000
-  api:
+      - 8081:8081
+  server:
     build: ./back_end
     ports:
-      - 3001:3001
+      - 8080:8080
     environment:
-      DB_URL: "mongodb://db/book-store" # Use equal sign for environment variables
+      DATABASE_URL: "mongodb://db:27017/book-store" 
   db:
-    image: mongo:4.0-xenial
+    image: mongo
     ports:
       - 27017:27017
     volumes:
-      - MERN_project:/data/db # Define volumes as a list
+      - MERN_project:/data/db 
 volumes:
   MERN_project:
 
