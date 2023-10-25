@@ -1,0 +1,40 @@
+# version: "3.8"
+# services:
+#   web:
+#     build: ./front_end
+#     ports:
+#       - 3000:3000
+#   api:
+#     build: ./back_end
+#     ports:
+#       - 3001:3001
+#     environment: DB_URL:mongodb//db/book-store
+#   db:
+#     image: mongo:4.0-xenial
+#     ports:
+#       - 27017:27017
+#     volumes: -MERN_project:/data/db
+# volumes:
+#   MERN_project:
+version: "3.8"
+services:
+  web:
+    build: ./front_end
+    ports:
+      - 3000:3000
+  api:
+    build: ./back_end
+    ports:
+      - 3001:3001
+    environment:
+      DB_URL: "mongodb://db/book-store" # Use equal sign for environment variables
+  db:
+    image: mongo:4.0-xenial
+    ports:
+      - 27017:27017
+    volumes:
+      - MERN_project:/data/db # Define volumes as a list
+volumes:
+  MERN_project:
+
+
