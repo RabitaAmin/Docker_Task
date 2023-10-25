@@ -1,0 +1,37 @@
+.tbl thead {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+}
+
+.tbl {
+    margin-top: 240px;
+    margin-left: 380px;
+
+}
+
+.tbl thead tr th {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 55px;
+}
+
+.tbl tbody tr td {
+    font-size: 16px;
+    padding: 10px 35px;
+    text-align: center;
+}
+
+.tbl .t1 {
+    padding: 30px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.tPrice {
+    font-size: 18px;
+    justify-content: center;
+}

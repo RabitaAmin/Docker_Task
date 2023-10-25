@@ -1,0 +1,39 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+
+
+    input {
+        padding: 10px;
+        border: 1px solid #e0a951;
+        border-radius: 10px;
+        font-size: 16px;
+        // height: 100px;
+        transition: border-color 0.3s ease;
+
+        &.error-border {
+            border-color: red;
+        }
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #e0a951;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #333;
+        }
+    }
+}
